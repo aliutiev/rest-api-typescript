@@ -1,0 +1,69 @@
+setup
+
+1. Install dependencies
+- npm init -y // setup project, with package.json
+- npm install -D typescript
+- npm install -D ts-node
+- npm install -D nodemon
+
+2. Setup env
+- setup tsconfig
+    {
+        "compilerOptions": {
+            "module": "NodeNext",
+            "moduleResolution": "node",
+            "baseUrl": "src",
+            "outDir": "dist",
+            "sourceMap": true,
+            "noImplicitAny": true,
+        },
+        "include": [
+            "src/**/*"
+        ],
+    }
+- setup nodemon
+    {
+        "watch": ["src"],
+        "ext": ".ts,.js",
+        "exec":"ts-node ./src/index.ts"
+    }
+- add script to package.json
+    "start":"nodemon",
+- npm start - run
+- npm i express body-parser cookie-parser compression cors    
+- npm i -D @types/express @types/body-parser @types/cookie-parser @types/compression @types/cors           
+
+3. Setup server on MongoDB
+- setup mongo database online
+- get user name and password
+- npm install mongoose
+temp username/password
+- user: andrew
+- pass: rsPqMDRgXjIJNnrc
+
+4. setup schema
+- create db folder within src
+- create model - users.ts
+
+5. helper functions
+- helper folder
+
+6. controller for auth
+- controller folder
+
+7. setting up route
+- router folder
+- index.ts
+- authentication.ts
+- add route to root index.ts
+
+8. setting up login 
+- setup function within controllers authentication.ts
+- setup function within router authentication.ts
+
+9. setting up users middleware
+- created folder called middleware
+- added index.ts to middleware folder
+- created user controller
+- created user router
+    - must update router folder index.ts with new routes
