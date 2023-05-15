@@ -32,5 +32,5 @@ mongoose.connection.on('error', (error: Error) => console.log(error));
 app.use('/', router());
 
 app.get('/', (req: express.Request, res:express.Response) => {
-    res.send("server ready for penetration")
+    res.send("server ready")
 });
